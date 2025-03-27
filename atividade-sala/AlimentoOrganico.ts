@@ -1,6 +1,6 @@
-import { ProdutoEcologico } from "./ProdutoEcologico";
+import { ProdutoEcologico } from "./ProdutoEcologico"
 
-class AlimentoOrganico implements ProdutoEcologico{
+export class AlimentoOrganico implements ProdutoEcologico{
     dataValidade: Date
     ingredientes: string[]
     nome: string
@@ -10,5 +10,34 @@ class AlimentoOrganico implements ProdutoEcologico{
         this.ingredientes = ingredientes
         this.nome = nome
         this.preco = preco
+    }
+
+    exibir():string{
+        return "AlimentoOrganico: dataValidade: " + this.dataValidade + ", ingredintes: " + this.ingredientes + ", nome: " + this.nome + ", preco: " + this.preco
+    }
+
+    setDataValidade(dataValidade:Date): void{
+        this.dataValidade = dataValidade
+    }
+    getdataValidade():Date{
+        return this.dataValidade
+    }
+    setIngredientes(ingredientes:string[]):void{
+        this.ingredientes = ingredientes
+    }
+    getIngredientes():string[]{
+        return this.ingredientes
+    }
+    setNome(nome:string):void{
+        this.nome=nome
+    }
+    getNome():string{
+        return this.nome
+    }
+    setPreco(preco:number):void{
+        this.preco = preco
+    }
+    getPreco():number{
+        return this.preco
     }
 }
